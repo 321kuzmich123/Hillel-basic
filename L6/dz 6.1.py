@@ -6,4 +6,4 @@ def get_letters_between(input_str):
     start_idx = all_letters.index(start)
     end_idx = all_letters.index(end)
     return all_letters[start_idx:end_idx + 1]
-print(get_letters_between("s-H"))
+print(get_letters_between("s-A"))
