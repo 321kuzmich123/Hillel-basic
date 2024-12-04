@@ -1,5 +1,4 @@
 lst = [0, 1, 7, 2, 4, 8]
-
 if not lst:
     print([])
 else:
