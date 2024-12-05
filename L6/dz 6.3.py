@@ -1,12 +1,11 @@
-def multiply_digits_until_single(num):
-    while num > 9:
-        product = 1
-        while num > 0:
-            digit = num % 10
-            product *= digit
-            num //= 10
-        num = product
-    return num
+num = int(input("Введіть ціле число: "))
 
-number = int(input("Введіть ціле число: "))
-print(f"Результат: {multiply_digits_until_single(number)}")
+while num > 9:
+    product = 1
+    while num > 0:
+        digit = num % 10
+        product *= digit
+        num //= 10
+    num = product
+
+print(f"Результат: {num}")
