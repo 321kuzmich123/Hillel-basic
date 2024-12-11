@@ -9,3 +9,4 @@ while num > 9:
     num = product
 
 print(f"Результат: {num}")
+
