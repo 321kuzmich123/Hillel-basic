@@ -13,3 +13,6 @@ elif operator == '/':
     else:
         result = " ошибка: деление на ноль "
 print( result )
+continue_calculating = input("продолжить? (y/n): ").lower()
+if continue_calculating not in ['y', 'yes']:
+    print("Calculator is exiting.")
