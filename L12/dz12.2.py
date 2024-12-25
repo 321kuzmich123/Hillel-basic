@@ -9,7 +9,6 @@ class Item:
     def __str__(self):
         return f"{self.name}, price: {self.price}"
 
-
 class User:
 
     def __init__(self, name, surname, numberphone):
@@ -20,7 +19,6 @@ class User:
     def __str__(self):
         return f"{self.name} {self.surname}"
 
-
 class Purchase:
 
     def __init__(self, user):
@@ -30,16 +28,9 @@ class Purchase:
 
     def add_item(self, item, cnt):
         if item.name == 'apple' and item in self.products and self.products[item] == 20:
-
             self.products[item] -= 10
-            if self.products[item] == 0:
-                del self.products[item]
         else:
-            if item in self.products:
-                self.products[item] += cnt
-            else:
-                self.products[item] = cnt
-
+            self.products[item] = self.products.get(item, 0) + cnt
 
         self.total = sum(item.price * cnt for item, cnt in self.products.items())
 
